@@ -1,5 +1,7 @@
 
 describe('formatPrice', () => {
+  it('should format a number as a whole dollar price')
+
   it('should use M in place of millions of dollars')
 
   it('should use K in place of thousands of dollars')
