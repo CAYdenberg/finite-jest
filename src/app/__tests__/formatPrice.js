@@ -1,5 +1,5 @@
 
-import formatPrice from './formatPrice'
+import formatPrice from '../formatPrice'
 
 describe('formatPrice', () => {
   it('should format a number as a whole dollar price', () => {
