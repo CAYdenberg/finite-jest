@@ -8,7 +8,9 @@ const ajaxLibSuccess = jest.fn(() => {
 })
 
 const ajaxLibFailure = jest.fn(() => {
-  return Promise.reject(new Error({status: 500}))
+  return Promise.resolve({
+    status: 500
+  })
 })
 
 describe('getPrice', () => {
@@ -24,11 +26,11 @@ describe('getPrice', () => {
 
   it('should return a promise that resolves to the house price, using resolves', () => {
     const obs = getPrice('E12345', ajaxLibSuccess)
-    expect(obs).resolves.toEqual(300000)
+    return expect(obs).resolves.toEqual(300000)
   })
 
   it('should return an error if the API returns an error', () => {
     const obs = getPrice('E12345', ajaxLibFailure)
-    expect(obs).rejects.toThrow(500)
+    return expect(obs).rejects.toEqual(500)
   })
 })
