@@ -11,6 +11,7 @@
   "author": "@CAYdenberg",
   "license": "MIT",
   "dependencies": {
+    "enzyme": "^3.3.0",
     "font-awesome": "^4.7.0",
     "json5": "^0.5.1",
     "prop-types": "^15.6.0",
