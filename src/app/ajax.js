@@ -6,7 +6,8 @@ export default function() {
     const result = Math.round(Math.random())
 
     setTimeout(() => {
-      if (!result) return {status: 500}
+      if (!result) return resolve({status: 500})
+
       return resolve({status: 200, body: {price: 450000}})
     }, RESPONSE_TIME)
   })

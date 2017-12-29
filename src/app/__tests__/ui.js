@@ -20,5 +20,5 @@ it('should call getPrice when the button is clicked', () => {
 
 it('should display the price', () => {
   const comp = shallow(<UI getPrice={getPrice} price="$300K" />)
-  expect(comp.contains('<p>$300K</p>')).toBeTruthy()
+  expect(comp.find('p').text()).toEqual('$300K')
 })
