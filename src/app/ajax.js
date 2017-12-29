@@ -2,12 +2,12 @@
 const RESPONSE_TIME = 500
 
 export default function() {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const result = Math.round(Math.random())
 
     setTimeout(() => {
-      if (!result) return reject(new Error(500))
-      return resolve(450000)
+      if (!result) return {status: 500}
+      return resolve({status: 200, body: {price: 450000}})
     }, RESPONSE_TIME)
   })
 }
