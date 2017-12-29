@@ -29,6 +29,6 @@ describe('getPrice', () => {
 
   it('should return an error if the API returns an error', () => {
     const obs = getPrice('E12345', ajaxLibFailure)
-    expect(obs).rejects.toEqual(300000)
+    expect(obs).rejects.toThrow(500)
   })
 })
