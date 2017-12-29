@@ -10,6 +10,7 @@
   "author": "@CAYdenberg",
   "license": "MIT",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "json5": "^0.5.1",
     "react": "^16.2.0",
     "reveal": "0.0.4"
