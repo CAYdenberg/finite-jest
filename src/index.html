@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="./icons.css">
         <link rel="stylesheet" href="../node_modules/reveal/index.css">
         <link rel="stylesheet" href="../node_modules/reveal/theme/night.css">
-        <!-- <link rel="stylesheet" href="../highlight.js/styles/dracula.css"> -->
         <link rel="stylesheet" href="./style.css">
     </head>
 
@@ -56,6 +55,24 @@
   <p>Source: <a href="https://medium.com/javascript-scene/the-outrageous-cost-of-skipping-tdd-code-reviews-57887064c412" target="_blank">
     Eric Elliot
   </p>
+</section>
+
+<section>
+  <h2>What is unit testing?</h2>
+  <p>Unit tests document/"prove" the functionality of an isolated unit of code, irregardless of the context in which that unit is used.</p>
+
+  <div class="fragment">
+    <p>Example: <a href="https://github.com/stylelint/stylelint/blob/master/lib/rules/color-no-invalid-hex/__tests__/index.js#L58" target="_blank">
+      stylelint
+    </a></p>
+    <ul>
+      <li>CSS linter: can be plugged into Atom, VSCode, run via command line, etc..</li>
+      <li>Lints CSS, SCSS, LESS</li>
+      <li>Numerous user-defined options</li>
+    </ul>
+    <p>The behaviour of each rule/unit can be easily tested regardless of the all the ways stylelint can be used</p>
+    <p><small> &gt;13000 individual tests</small></p>
+  </div>
 </section>
 
 <section>
@@ -114,6 +131,5 @@
           </div>
 
     <script src="./index.js"></script>
-    <!-- <script src="../highlight.js/highlight.pack.js"></script> -->
   </body>
 </html>
