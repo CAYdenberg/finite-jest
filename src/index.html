@@ -1,4 +1,4 @@
-˚<!doctype html>
+<!doctype html>
 <html>
     <head>
         <link rel="stylesheet" href="./icons.css">
@@ -12,21 +12,103 @@
         <div class="reveal">
             <div class="slides">
 
-              <section class="title-slide">
-                <h1>The &lt;script&gt; tag: At the bottom of everything</h1>
-                <h3>Casey A. Ydenberg</h3>
-                <p><i class="icon-twitter"></i> @CAYdenberg</p>
-                <p><i class="icon-github"></i> CAYdenberg</p>
-                <p><i class="icon-mail"></i> ydenberg@gmail.com</p>
-                <p><i class="icon-demo"></i> caseyy.org</p>
-              </section>
+<section class="title-slide">
+  <h1>Finite Jest: Pragmatic Unit Testing</h1>
+  <h3>Casey A. Ydenberg</h3>
+  <p><i class="icon-twitter"></i> @CAYdenberg</p>
+  <p><i class="icon-github"></i> CAYdenberg</p>
+  <p><i class="icon-mail"></i> ydenberg@gmail.com</p>
+  <p><i class="icon-demo"></i> caseyy.org</p>
+</section>
 
-              <section>
-                  <div>
-                    <h2>A simple example</h2>
-                    <div id="app"></div>
-                  </div>
-              </section>
+<section>
+  <h2>Outline</h2>
+  <ul>
+    <li>Why write unit tests?</li>
+    <li>How to get the most out of testing</li>
+    <li>Brief introduction to Jest</li>
+    <li>A simple example</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Why test?</h2>
+  <p><i>Often more lines of test code than implementation code</i></p>
+  <p><a href="https://www.computer.org/csdl/mags/so/2007/03/s3024.pdf" target="_blank">
+    30% more initial build-out time
+  </a></p>
+  <div class="fragment">
+    <p><a href="https://www.researchgate.net/publication/255965523_Integrating_Software_Assurance_into_the_Software_Development_Life_Cycle_SDLC" target="_blank">
+      Reduces production bug density by 40% - 80%
+    </a></p>
+    <p>Production bugs:</p>
+    <ul>
+      <li>cost more to fix</li>
+      <li>makes developers &#57432;</li>
+      <li>makes users &#57432;</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Testing/TDD saves $</h2>
+  <img src="./img/project_example.png" />
+  <p>Source: <a href="https://medium.com/javascript-scene/the-outrageous-cost-of-skipping-tdd-code-reviews-57887064c412" target="_blank">
+    Eric Elliot
+  </p>
+</section>
+
+<section>
+  <h2>Unit vs Integration Testing</h2>
+  <img src="./img/unit-vs-integration-testing.png" />
+  <p>Source: <a href="http://blog.stevensanderson.com/2009/08/24/writing-great-unit-tests-best-and-worst-practises/" target="_blank">
+    Steve Sanderson
+  </p>
+</section>
+
+<section>
+  <div class="half">
+    <h3>Testing is easiest for code which is:</h3>
+    <ul>
+      <li>Synchronous</li>
+      <li>"Pure"</li>
+    </ul>
+  </div>
+  <div class="half">
+    <h3>Testing is hardest for code which is:</h3>
+    <ul>
+      <li>Asynchronous</li>
+      <li>Has side effects</li>
+      <li>Depends on context (including `this`, closures)</li>
+      <li>Mutates stuff (including DOM, database records)</li>
+    </ul>
+  </div>
+  <p>Put <strong>logic</strong> in code which is easy to test</p>
+</section>
+
+<section>
+  <h2>You will need:</h2>
+  <ul>
+    <li>A test runner</li>
+    <li>An assertion library</li>
+    <li>(optional) A system for spies/stubs/mocks</li>
+  </ul>
+  <div class="fragment">
+    <h3>Advantages of Jest</h3>
+    <ul>
+      <li>All-in-one</li>
+      <li>Convention over configuration</li>
+      <li>Nice CLI and interactive watch mode</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div>
+    <h2>A simple example</h2>
+    <div id="app"></div>
+  </div>
+</section>
 
             </div>
           </div>
