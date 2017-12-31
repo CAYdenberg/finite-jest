@@ -11,8 +11,10 @@
   "author": "@CAYdenberg",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "json5": "^0.5.1",
+    "popsicle": "^9.2.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
