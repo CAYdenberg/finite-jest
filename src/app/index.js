@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import getPrice from './getPrice'
 import formatPrice from './formatPrice'
-import UI from './UI'
+import UI from './ui'
 
 var Reveal = require('reveal')
 
