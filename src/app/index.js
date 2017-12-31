@@ -1,5 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import getPrice from './getPrice'
+import formatPrice from './formatPrice'
+import UI from './ui'
+
 var Reveal = require('reveal')
 
 Reveal.initialize({
@@ -20,8 +24,13 @@ class Controller extends React.Component {
   }
 
   _getHousePrice() {
-    this.setState({
-      housePrice: 'Hello world'
+    this.setState({housePrice: null})
+
+    getPrice().then(price => {
+      const formattedPrice = formatPrice(price)
+      this.setState({housePrice: formattedPrice})
+    }).catch(() => {
+      alert('Error getting response from network')
     })
   }
 
@@ -29,10 +38,7 @@ class Controller extends React.Component {
     const {state} = this
 
     return (
-      <div>
-        <button type="button" onClick={this._getHousePrice}>Get house price</button>
-        <p>{state.housePrice}</p>
-      </div>
+      <UI getPrice={this._getHousePrice} price={state.housePrice} />
     )
   }
 }
