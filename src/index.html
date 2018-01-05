@@ -28,6 +28,7 @@
     <li>Brief introduction to Jest</li>
     <li>A simple example</li>
   </ul>
+  <p style="font-size: 1.5em; margin-top: 1em">https://github.com/CAYdenberg/finite-jest.git</p>
 </section>
 
 <section>
@@ -59,19 +60,24 @@
 
 <section>
   <h2>What is unit testing?</h2>
-  <p>Unit tests document/"prove" the functionality of an isolated unit of code, irregardless of the context in which that unit is used.</p>
+  <p>Unit tests document/"prove" the functionality of an isolated unit of code, regardless of the context in which that unit is used.</p>
 
-  <div class="fragment">
-    <p>Example: <a href="https://github.com/stylelint/stylelint/blob/master/lib/rules/color-no-invalid-hex/__tests__/index.js#L58" target="_blank">
-      stylelint
-    </a></p>
+  <div class="fragment" style="margin-top: 1em">
+    <p>Example: stylelint
+    </p>
     <ul>
       <li>CSS linter: can be plugged into Atom, VSCode, run via command line, etc..</li>
       <li>Lints CSS, SCSS, LESS</li>
       <li>Numerous user-defined options</li>
     </ul>
-    <p>The behaviour of each rule/unit can be easily tested regardless of the all the ways stylelint can be used</p>
-    <p><small> &gt;13000 individual tests</small></p>
+
+    <p style="margin-top: 1em">The behaviour of each rule/unit can be
+      <a href="https://github.com/stylelint/stylelint/blob/master/lib/rules/color-no-invalid-hex/__tests__/index.js#L58" target="_blank">
+        easily tested
+      </a>
+    regardless of the all the ways stylelint can be used</p>
+
+    <p><small>&gt;13000 individual tests</small></p>
   </div>
 </section>
 
@@ -87,11 +93,11 @@
   <div class="half">
     <h3>Testing is easiest for code which is:</h3>
     <ul>
-      <li>Synchronous</li>
       <li>"Pure"</li>
+      <li>Synchronous</li>
     </ul>
   </div>
-  <div class="half">
+  <div class="half fragment">
     <h3>Testing is hardest for code which is:</h3>
     <ul>
       <li>Asynchronous</li>
@@ -100,7 +106,9 @@
       <li>Mutates stuff (including DOM, database records)</li>
     </ul>
   </div>
-  <h3>Put <strong>logic</strong> in code which is easy to test</h3>
+  <h3 style="display: inline-block; margin-top: 1em" class="fragment">
+    Put <strong>logic</strong> in code which is easy to test
+  </h3>
 </section>
 
 <section>
